@@ -11,15 +11,7 @@ const parseJSON = strJSON => {
     return '';
   };
   const getVersionGame = () => {
-    let version = process.env.FISH_VERSION || 1;
-    try {
-      version = parseInt(version);
-    } catch(ex) {
-      version = 1;
-    }
-    if (version === 1) version = '';
-  
-    return version;
+    return "1.0";
   };
   
   const isEmptyObject = (obj) => {
@@ -35,12 +27,30 @@ const parseJSON = strJSON => {
       return [error];
     }
   };
-  
-  
-  module.exports = {
+
+  const main = (objectAssigned)  =>
+  {
+      console.log(" ****** MAIN ******+++*  --------->>  ", objectAssigned);
+      let listKeys = Object.keys(ExportedFunction);
+      for (let i = 0; i < listKeys.length; i++) {
+        const func = listKeys[i];
+        if(func != 'main')
+        {
+          console.log(" new func ::  ", func);
+          objectAssigned.prototype[func] = ExportedFunction[func];
+        }
+      }      
+  }
+
+  const ExportedFunction = {
     parseJSON,
     getVersionGame,
     tryParseJson,
-    isEmptyObject
-  };
+    isEmptyObject,
+    main
+
+  }
+  
+  
+  module.exports = ExportedFunction;
   
