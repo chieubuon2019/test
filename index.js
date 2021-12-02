@@ -12,7 +12,7 @@ const parseJSON = strJSON => {
 };
 
 const getVersionGame = () => {
-  return "1.1";
+  return "1.2";
 };
 
 const isEmptyObject = (obj) => {
