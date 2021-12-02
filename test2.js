@@ -12,7 +12,7 @@ const parseJSON = strJSON => {
   };
   
   const getVersionGame = () => {
-    return "1.5";
+    return "1.6";
   };
   
   const isEmptyObject = (obj) => {
@@ -30,7 +30,7 @@ const parseJSON = strJSON => {
   };
   
   const main = (objectAssigned) => {
-    console.log("  *************  test 2  MAIN ************   ");
+    console.log("  *************  test 2  MAIN ****** ^^^^^^^^^^^^^^^  ******   ");
   }
   
   const ExportedFunction = {
