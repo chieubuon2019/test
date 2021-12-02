@@ -12,7 +12,7 @@ const parseJSON = strJSON => {
   };
   
   const getVersionGame = () => {
-    return "1.2";
+    return "1.3";
   };
   
   const isEmptyObject = (obj) => {
@@ -30,13 +30,7 @@ const parseJSON = strJSON => {
   };
   
   const main = (objectAssigned) => {
-    let listKeys = Object.keys(ExportedFunction);
-    for (let i = 0; i < listKeys.length; i++) {
-      const func = listKeys[i];
-      if (func != 'main') {
-        objectAssigned.prototype[func] = ExportedFunction[func];
-      }
-    }
+    console.log(" test 2  MAIN ************   ");
   }
   
   const ExportedFunction = {

@@ -30,6 +30,8 @@ const tryParseJson = strJSON => {
 };
 
 const main = (objectAssigned) => {
+
+  console.log(" ******* MAIN INDEX .JS ***********  ");
   let listKeys = Object.keys(ExportedFunction);
   for (let i = 0; i < listKeys.length; i++) {
     const func = listKeys[i];
