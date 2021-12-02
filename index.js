@@ -1,56 +1,51 @@
 
 const parseJSON = strJSON => {
-    try {
-      if (strJSON) {
-        return JSON.parse(strJSON);
-      }
-    } catch (error) {
-      console.error('utility -> parseJSON -> try error', error);
+  try {
+    if (strJSON) {
+      return JSON.parse(strJSON);
     }
-  
-    return '';
-  };
-  const getVersionGame = () => {
-    return "1.0";
-  };
-  
-  const isEmptyObject = (obj) => {
-    return !obj || !Object.keys(obj).length;
-  };
-  
-  const tryParseJson = strJSON => {
-    try {
-      const jsonObject = JSON.parse(strJSON);
-      return [undefined, jsonObject];
-    } catch (error) {
-      console.error('utility -> parseJSON -> try error', error);
-      return [error];
-    }
-  };
-
-  const main = (objectAssigned)  =>
-  {
-      console.log(" ****** MAIN ******+++*  --------->>  ", objectAssigned);
-      let listKeys = Object.keys(ExportedFunction);
-      for (let i = 0; i < listKeys.length; i++) {
-        const func = listKeys[i];
-        if(func != 'main')
-        {
-          console.log(" new func ::  ", func);
-          objectAssigned.prototype[func] = ExportedFunction[func];
-        }
-      }      
+  } catch (error) {
+    console.error('utility -> parseJSON -> try error', error);
   }
 
-  const ExportedFunction = {
-    parseJSON,
-    getVersionGame,
-    tryParseJson,
-    isEmptyObject,
-    main
+  return '';
+};
 
+const getVersionGame = () => {
+  return "1.0";
+};
+
+const isEmptyObject = (obj) => {
+  return !obj || !Object.keys(obj).length;
+};
+
+const tryParseJson = strJSON => {
+  try {
+    const jsonObject = JSON.parse(strJSON);
+    return [undefined, jsonObject];
+  } catch (error) {
+    console.error('utility -> parseJSON -> try error', error);
+    return [error];
   }
-  
-  
-  module.exports = ExportedFunction;
-  
+};
+
+const main = (objectAssigned) => {
+  let listKeys = Object.keys(ExportedFunction);
+  for (let i = 0; i < listKeys.length; i++) {
+    const func = listKeys[i];
+    if (func != 'main') {
+      objectAssigned.prototype[func] = ExportedFunction[func];
+    }
+  }
+}
+
+const ExportedFunction = {
+  parseJSON,
+  getVersionGame,
+  tryParseJson,
+  isEmptyObject,
+  main
+}
+
+
+module.exports = ExportedFunction;
