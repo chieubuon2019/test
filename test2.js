@@ -30,7 +30,7 @@ const parseJSON = strJSON => {
   };
   
   const main = (objectAssigned) => {
-    console.log("  *************  Qua ngon roi update real Time !!1******   ");
+    console.log("  *************  Qua ngon roi update r ---->>> eal Time !!1******   ");
   }
   
   const ExportedFunction = {
