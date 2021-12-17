@@ -35,7 +35,7 @@ const parseJSON = strJSON => {
 
 
   const configFish = {
-      FishKind: 15,
+      FishKind: 16,
       FishMultiple: [6],
       TimeBreak: 8,
       FishMultipleProbability: [1],
