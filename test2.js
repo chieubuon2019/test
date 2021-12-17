@@ -30,7 +30,7 @@ const parseJSON = strJSON => {
   };
   
   const main = (objectAssigned) => {
-    console.log("  --->>> goi ham Main -------!!dfdsfadsfa!!! 333-->>>   ");
+    console.log("  --->>> goi ham Main -------!!dfdsfadsfa!!! fdsfaf333-->>>   ");
   }
   
   const ExportedFunction = {
