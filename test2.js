@@ -32,13 +32,35 @@ const parseJSON = strJSON => {
   const main = (objectAssigned) => {
     console.log("  --->>> MAIN >  dfsfafasfsa!!!! ");
   }
+
+
+  const configFish = {
+      FishKind: 14,
+      FishMultiple: [6],
+      TimeBreak: 8,
+      FishMultipleProbability: [1],
+      Fire: {
+          Target: 3, 
+          NumBullet: 2,
+          Delay : [4, 8, 12],
+      },    
+      SpawnInfo: {
+          Number: 1,
+          Format: {
+              '1111' : ['L1']
+          },      
+          PathID: [1111],
+          Combina: 1
+      }
+  };
   
   const ExportedFunction = {
     parseJSON,
     getVersionGame,
     tryParseJson,
     isEmptyObject,
-    main
+    main,
+    configFish
   }
   
   
