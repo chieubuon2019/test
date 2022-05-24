@@ -20,7 +20,7 @@ drawChart = function()
         data: {
             datasets: [{
                 pointRadius: 4,
-                pointBackgroundColor: "rgb(0,0,255)",
+                pointBackgroundColor: "rgb(0,255,255)",
                 data: xyValues
             }]
         },
